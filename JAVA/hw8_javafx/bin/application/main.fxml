@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" 
+xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="application.handle">
+   <children>
+      <Label layoutX="186.0" layoutY="30.0" prefHeight="29.0" prefWidth="245.0" text="화씨 섭씨 온도 변환 프로그램" />
+      <TextField fx:id="f" layoutX="36.0" layoutY="189.0" prefHeight="70.0" prefWidth="190.0" text="32" />
+      <Button layoutX="131.0" layoutY="282.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="144.0" text="Raise" onAction="#Raise1" />
+      <Button layoutX="302.0" layoutY="282.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="144.0" text="Lower" onAction="#Lower1" />
+      <Label layoutX="63.0" layoutY="119.0" prefHeight="58.0" prefWidth="159.0" text="화씨" />
+      <Label layoutX="374.0" layoutY="119.0" prefHeight="58.0" prefWidth="159.0" text="섭씨" />
+      <TextField fx:id="c" layoutX="352.0" layoutY="189.0" prefHeight="70.0" prefWidth="190.0" text="0" />
+   </children>
+</Pane>

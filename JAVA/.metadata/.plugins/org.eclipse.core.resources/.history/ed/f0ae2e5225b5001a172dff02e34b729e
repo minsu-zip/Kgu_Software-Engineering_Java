@@ -1,0 +1,64 @@
+package hourtest;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+
+public class HourTest {
+	
+	Hour check = new Hour();
+	
+	@Test
+	public class HourTest {
+		Hour check = new Hour();
+
+		
+		//정상적인 급여를 받는 경우를 위한 케이스
+		@Test
+		public void testPayNormal() {
+			final int type = check.pay(1, 10000);
+			assertEquals(10000,type);
+			System.out.println("급여 : "+ check.pay(1, 10000));
+		}
+		
+		//오버타임으로 일했을 경우를 위한 케이스
+		@Test
+		public void testPayOver() {
+			final int type = check.pay(41, 10000);
+			assertEquals(415000,type);
+			System.out.println("오버타임 급여 : "+ check.pay(41, 10000) );
+		}
+		
+		//근무시간이 없을 때를 위한 케이스
+		@Test
+		public void minHour() {
+			final int type = check.pay(0, 5000);
+			assertEquals(0,type);
+			System.out.println("근무시간이 0시간입니다.");
+		}
+		
+		//근무시간이 초과했을 경우를 위한 케이스
+		@Test
+		public void maxHour() {
+			final int type = check.pay(81, 5000);
+			assertEquals(0,type);
+			System.out.println("근무시간이 80시간 초과했습니다.");
+		}
+		
+		//시급이 0원인 경우를 위한 케이스
+		@Test
+		public void minWage() {
+			final int type = check.pay(30, 0);
+			assertEquals(0,type);
+			System.out.println("시급이 0원입니다.");
+		}
+		
+		//시급이 10000원을 넘는경우를 위한 케이스
+		@Test
+		public void maxWage() {
+			final int type = check.pay(30, 10001);
+			assertEquals(0,type);
+			System.out.println("시급이 10000원 초과했습니다.");
+		}
+
+	}
